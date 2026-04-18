@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACE BOT - Connexion WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🤖 JACE BOT MD</h1>
+            <p>Connexion WhatsApp simplifiée</p>
+        </div>
+        
+        <div class="card">
+            <h2>📱 Connecter votre WhatsApp</h2>
+            
+            <div class="input-group">
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="tel" id="phone" placeholder="Ex: 241065491629" />
+                <p class="hint">Format international sans le "+"</p>
+            </div>
+            
+            <button id="generateBtn" onclick="generateCode()">🔑 Générer le code de couplage</button>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Connexion aux serveurs WhatsApp...</p>
+            </div>
+            
+            <div id="result" class="result hidden">
+                <h3>✅ Votre code de couplage :</h3>
+                <div class="code" id="codeDisplay">----</div>
+                <p class="expire" id="expireText">⏱️ Ce code expire dans 2:00</p>
+                <ol class="instructions">
+                    <li>Ouvrez WhatsApp sur votre téléphone</li>
+                    <li>Allez dans <strong>Paramètres > Appareils connectés</strong></li>
+                    <li>Appuyez sur <strong>Connecter un appareil</strong></li>
+                    <li>Entrez le code ci-dessus</li>
+                </ol>
+            </div>
+            
+            <div id="error" class="error hidden"></div>
+        </div>
+        
+        <div class="footer">
+            <p>⚡ Propulsé par JACE TECHNOLOGIES</p>
+            <p>📌 Besoin d'aide ? <a href="https://t.me/QueenNovaBot">Contact Telegram</a></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
